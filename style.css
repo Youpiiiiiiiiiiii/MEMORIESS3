@@ -1,0 +1,191 @@
+*,
+html {
+    scroll-behavior: smooth;
+    text-decoration: none;
+    font-family: poppins, sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(background\ imageee.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    width: calc(100% - 40px);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: color 0.3s ease; /* Animasi warna saat hover */
+}
+
+nav ul li a:hover {
+    color:  #8B0000; /* Warna saat hover */
+}
+
+.section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    font-weight: 500;
+}
+
+.section h2 {
+    text-align: center;
+}
+
+.section p{
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.gallery {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+}
+
+.photo {
+    width: calc(33.33% - 20px);
+    grid-column: auto;
+    margin: 0 10px;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    text-align: center;
+    align-items: center;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+span {
+    color: red;
+    font-weight: 900;
+}
+
+#bgAudio {
+    display: flex;
+}
+
+#toggleAudio {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #A52A2A;
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease; 
+}
+
+#toggleAudio:hover {
+    background-color: #8B0000; /* Warna latar belakang hijau yang lebih gelap saat hover */
+}
+
+.content-wrapper {
+    flex: 1; /* Membuat konten menempati ruang yang tersedia */
+    overflow-y: auto; /* Membuat konten dapat digulir jika lebih panjang dari jendela browser */
+    padding: 20px; /* Padding untuk konten */
+}
+
+footer {
+    flex-shrink: 0; /* Footer tidak akan menambah tinggi halaman */
+    background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang transparan */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+button {
+    background-color: #A52A2A;;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efek hover */
+button:hover {
+    background-color: #8B0000;
+}
+
+/*AUDIOOOO*/
+/* Gaya untuk pemutar audio */
+
+/* Media query untuk menyesuaikan tata letak galeri pada layar berukuran kecil (mobile) */
+@media screen and (max-width: 768px) {
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .section p{
+        font-size: 24px;
+        line-height: 1.5;
+        text-align: left;
+    }
+    
+    .photo {
+        width: calc(33.33% - 20px); /* Lebar foto diatur agar 3 foto masuk dalam satu baris */
+        margin: 0 10px;
+        height: 130px;
+        width: 130px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+    }
+    
+    .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Media query tambahan untuk layar lebih besar (laptop) */
+@media screen and (min-width: 1024px) {
+    .photo {
+        display: grid;
+         /* Tetap menampilkan 3 foto per baris pada layar yang lebih besar */
+    }
+}
